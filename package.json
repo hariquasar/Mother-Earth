@@ -1,0 +1,22 @@
+{
+  "name": "mother-earth",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.11",
+    "vite-plugin-string": "^1.2.2"
+  },
+  "dependencies": {
+    "gsap": "^3.12.4",
+    "three": "^0.160.0"
+  }
+}
