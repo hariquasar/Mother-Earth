@@ -10,18 +10,45 @@
     body {
       margin: 0px;
     }
+
+    .roboto-mono-400 {
+      font-family: "Roboto Mono", monospace;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    .roboto-medium-italic {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-style: italic;
+    }
   </style>
   <link href="./src/output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:ital,wght@1,500&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-  <div class="flex">
-    <div class="w-1/2">
-      <h1>
-        Hello
+  <div class="flex h-screen bg-black">
+    <div class="w-1/2 flex flex-col justify-center px-8">
+      <h1 class="text-white text-4xl mb-8 roboto-medium-italic">
+        Hello This is Stemwork
       </h1>
+      <p class="text-gray-400 mb-8 roboto-mono-400">
+        by harry <br>
+        click the button below to get the source code
+      </p>
+      <div>
+        <a href="https://github.com/hariquasar/Mother-Earth" class="text-white bg-green-600 inline-block px-8 py-4 rounded-full">Learn More</a>
+      </div>
+
     </div>
-    <div class="w-1/2" id="canvasContainer"><canvas></canvas></div>
+    <div class="w-1/2" id="canvasContainer">
+      <canvas></canvas>
+    </div>
   </div>
   <div id="app"></div>
   <script type="module" src="/main.js"></script>
