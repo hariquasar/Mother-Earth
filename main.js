@@ -81,7 +81,7 @@ camera.position.z = 15;
 
 function createPoint(lat, lng) {
   const point = new THREE.Mesh(
-    new THREE.SphereGeometry(0.1, 50, 50),
+    new THREE.BoxGeometry(0.1, 0.1, 0.8),
     new THREE.MeshBasicMaterial({
       color: "#ff0000",
     })
@@ -98,6 +98,9 @@ function createPoint(lat, lng) {
   point.position.y = y;
   point.position.z = z;
 
+  point.lookAt(0,0,0)
+  point.geometry.applyMatrix4(new THREE.Matrix4().makeTranslation(0,0,-0.5))
+
   group.add(point);
 }
 
@@ -108,8 +111,8 @@ createPoint(55.3617609, -3.4433238)
 createPoint(37.4900318, 136.4664008)
 
 const mouse = {
-  x: undefined,
-  y: undefined,
+  x: 0,
+  y: 0,
 };
 
 sphere.rotation.y = -Math.PI / 2;
